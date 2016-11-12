@@ -8,10 +8,9 @@ var playerScore2 = 301;
 console.log('Player 1 Score: ' + playerScore1 + '\nPlayer 2 Score: ' + playerScore2);
 console.log("Player 1 Now Throwing");
 
-var currentThrow = "T10";
+var currentThrow = "10";
 var throwInt;
 var throwVal;
-var throwMultiplier;
 
 // is the current throw multiplied by any value?
 multiplier = function() {
@@ -30,6 +29,9 @@ multiplier = function() {
 };
 multiplier();
 
+playerScore1 = playerScore1 - throwVal;
+
 console.log("Current Throw = " + currentThrow);
 console.log("Throw Gore = " + throwInt);
 console.log("Value of Throw = " + throwVal);
+console.log("Player 1 Score: " + playerScore1);

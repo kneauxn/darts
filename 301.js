@@ -1,30 +1,35 @@
+
 // Game mode 301
 console.log("Initiating new game of 301");
-console.log('Player 1 Score: 301 \nPlayer 2 Score: 301');
-console.log("Player 1 Now Throwing");
 
 var playerScore1 = 301;
-var currentThrow = "10";
-var throwInt = parseInt(currentThrow.slice(1));
-var throwVal;
-var throwValid;
+var playerScore2 = 301;
 
-// is the input of currentThrow valid?
-throwValidation = function() {
-// is the input the right length?
-  if (currentThrow <= 3) {
-      throwValid = false
-  }
-};
+console.log('Player 1 Score: ' + playerScore1 + '\nPlayer 2 Score: ' + playerScore2);
+console.log("Player 1 Now Throwing");
+
+var currentThrow = "T10";
+var throwInt;
+var throwVal;
+var throwMultiplier;
 
 // is the current throw multiplied by any value?
 multiplier = function() {
-// is it a double?
     if (currentThrow.charAt(0) == "D") {
-        throwVal = throwInt * 2;
-    } else if (currentThrow.charAt(0) == "T") {
-            throwVal = throwInt * 3;
-        }
+        throwInt = currentThrow.slice(1);
+        throwval = 2 * parseInt(throwInt);
+    }
+    else if (currentThrow.charAt(0) == "T") {
+        throwInt = currentThrow.slice(1);
+        throwVal = 3 * parseInt(throwInt);
+    }
+    else {
+        throwInt = parseInt(currentThrow);
+        throwVal = parseInt(currentThrow);
+    }
 };
 multiplier();
-console.log(throwVal);
+
+console.log("Current Throw = " + currentThrow);
+console.log("Throw Gore = " + throwInt);
+console.log("Value of Throw = " + throwVal);

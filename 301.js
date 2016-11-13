@@ -12,6 +12,12 @@ var currentThrow = "10";
 var throwInt;
 var throwVal;
 
+inputValid = function () {
+    switch (currentThrow){
+
+    }
+}
+
 // is the current throw multiplied by any value?
 multiplier = function() {
     if (currentThrow.charAt(0) == "D") {
@@ -22,6 +28,7 @@ multiplier = function() {
         throwInt = currentThrow.slice(1);
         throwVal = 3 * parseInt(throwInt);
     }
+// if it is not multiplied the value stays as is
     else {
         throwInt = parseInt(currentThrow);
         throwVal = parseInt(currentThrow);
@@ -34,4 +41,4 @@ playerScore1 = playerScore1 - throwVal;
 console.log("Current Throw = " + currentThrow);
 console.log("Throw Gore = " + throwInt);
 console.log("Value of Throw = " + throwVal);
-console.log("Player 1 Score: " + playerScore1);
+console.log("Player 1 New Score: " + playerScore1);
